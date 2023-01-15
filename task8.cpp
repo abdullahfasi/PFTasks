@@ -1,21 +1,27 @@
 #include <iostream>
 using namespace std;
-main(){
-float vegprice;
-float fruitprice;
-int kgsofveg;
-int kgsoffruits;
-cout <<" Vegetable price per kg: ";
-cin >>vegprice;
-cout <<" Fruit price per kg: ";
-cin >>fruitprice;
-cout <<" Total kgs of Vegetables: ";
-cin >>kgsofveg;
-cout <<"Total kgs of Fruits: ";
-cin>>kgsoffruits;
-int earning;
-earning=(vegprice*kgsofveg)+(fruitprice*kgsoffruits);
-cout <<" Total Earning in coins: "<<earning<<endl;
-int earninginRps;
-earninginRps=earning/1.94;
-cout <<"Total Earning in Rps: "<<earninginRps;}
+main()
+{
+    int h,x,y;
+    cout << "integr h: ";
+    cin >>h;
+    cout <<"coordinate x: ";
+    cin >>x;
+    cout <<"coordinate y: ";
+    cin>>y;
+    if( x >= h*1 || x <= h*3 || y <= h*0 || y >= h*8)
+    {
+        if( x >h*1 && x < h*2 && y >h*0 && y < h*4)
+        {
+            cout << "Inside";
+        }
+        if( x ==h*1 || x == h*2 || y== h*0 || y == h*4)
+        {
+            cout << "Border";
+        }
+    }
+    if( x< h*1 || x > h*3 || y > h*4)
+    {
+        cout << "Outside ";
+    }
+}
