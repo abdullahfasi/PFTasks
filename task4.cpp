@@ -1,22 +1,69 @@
 #include <iostream>
 using namespace std;
-main(){
-int subject1marks;
-int subject2marks;
-int subject3marks;
-int subject4marks;
-int subject5marks;
-int sum;
-float percentage;
-cout <<"Subject1 Marks: ";
-cin >>subject1marks;
-cout <<"Subject2 Marks: ";
-cin >>subject2marks;
-cout <<"Subject3 Marks: ";
-cin >>subject3marks;
-cout <<"Subject4 Marks: ";
-cin >>subject4marks;
-cout <<"Subject5 Marks: ";
-cin >>subject5marks;
-percentage=(subject1marks+subject2marks+subject3marks+subject4marks+subject5marks)*100/500;
-cout <<"Percentage= "<<percentage;}
+main()
+{
+    char type;
+    char call;
+    int mints;
+  
+    float charges;
+    float extraAmount;
+    cout << "type is: ";
+    cin >>type;
+    cout << "pres d for day and n for night : ";
+    cin >>call;
+    cout << "mints you used the service:  ";
+    cin >>mints;
+    
+    if (type == 'r')
+    {
+        float initialCharges = 10.0;
+        if (mints <= 50)
+        {
+    
+      cout << "Charges are : "<<initialCharges<<"$";
+        }
+       if(mints > 50 )
+       {
+      
+      extraAmount = .20 * (mints - 50) ;
+     charges = initialCharges + extraAmount;
+      cout << "Charges are : "<<charges<<"$";
+    }
+    }
+    if (type == 'p' && call == 'd')
+    { 
+      float initialCharges = 25.00;
+        if(mints <= 75)
+        {
+         
+          cout << "Charges are : "<<initialCharges<<"$";
+        }
+        else if (mints >75)
+        {
+        
+         extraAmount = .10 * (mints - 75) ;
+        charges = 25.00 + extraAmount ; 
+        cout <<"Charges are : "<<charges<<"$";
+    
+        }
+    }
+    
+         if ( type == 'p' && call == 'n')
+         {
+         float initialCharges = 25.00;
+        if(mints <= 100)
+        {
+          
+          cout << "Charges are : "<<initialCharges<<"$";
+        }
+         
+         if (mints >100)
+        {
+         
+         extraAmount = .05 * (mints - 100) ;
+        charges = 25.00 + extraAmount ; 
+        cout <<"Charges are : "<<charges<<"$";
+    }
+         }
+}
